@@ -36,6 +36,8 @@ conda activate SnakeAI
 
 Windows:
 ```bash 
+pip install setuptools==65.5.0 pip==21
+
 # 使用 GPU 训练需要手动安装完整版 PyTorch
 conda install pytorch=2.0.0 torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
 
@@ -43,7 +45,8 @@ conda install pytorch=2.0.0 torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
 python .\utils\check_gpu_status.py
 
 # 安装外部代码库
-pip install -r requirements.txt
+# 手动安装 gym-0.21.0
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 macOS (Apple Silicon):
